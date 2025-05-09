@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+"""
+# Trabajo Práctico 4 - Estructuras Repetitivas
+**Tecnicatura Universitaria en Programación a Distancia - UTN**
+| **Marinoni, Macarena**
+
+"""
+## Ejercicio 1: Crea un programa que imprima en pantalla todos los números enteros desde 0 hasta 100 (incluyendo ambos extremos), en orden creciente, mostrando un número por línea.
+
+for i in range(101):
+    print(i)
+
+## Ejercicio 2: Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de dígitos que contiene.
+
+numero = int(input("Ingrese un número entero: "))
+lengitud = len(str(abs(numero)))  # abs() para manejar números negativos
+print(f"El número {numero} tiene {lengitud} dígitos.")
+
+## Ejercicio 3: Escribe un programa que sume todos los números enteros comprendidos entre dos valores dados por el usuario, excluyendo esos dos valores.
+
+valor1 = int(input("Ingrese el primer valor: "))
+valor2 = int(input("Ingrese el segundo valor: "))
+total = 0
+for i in range(valor1+1, valor2):
+    total += i
+print(f"La suma de los números entre {valor1} y {valor2} es: {total}")
+
+## Ejercicio 4: Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia. El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0.
+
+numero4= int(input("Ingresá un número entero: "))
+suma = 0
+while numero1 != 0:
+    suma = suma+numero1
+    numero4= int(input("Ingresá otro número entero o 0 si deseas finalizar:"))
+print(f"La suma acumulada entre los numeros ingresados es: {suma}")
+
+## Ejercicio 5: Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+
+import random
+numero5= int(input("¡Juguemos a las adivinanzas! Tenes que acertar el numero en el cual estoy pensado. Un pista: esta entre 0 y 9. Ingresá tu prediccion: "))
+numero_aleatorio = random.randint(0, 9)
+intentos = 1 
+
+while numero5 != numero_aleatorio:
+    intentos += 1
+    numero5 = int(input("Tu prediccion no es correcta, intentá otro numero:")) 
+print(f"¡Adivinaste en {intentos} intentos!")
